@@ -9,12 +9,16 @@
 :root {
     --dashboard-bg-clr: #63C5EA;
     --dashboard-hvr-clr: #4AAED9;
+    --search-input-clr: #63C5EA;
     --dashboard-txt-clr: white;
     --dashboard-border-clr: white;
+    --profile-info-bg-clr: white;
+    --activity-bg-clr: #d3d3d3;
+    --btn-color: #4AAED9;
 }
 
 .grid-layout {
-    background-color: red;
+    background-color: var(--activity-bg-clr);
     height: 100vh;
     width: 100vw;
 
@@ -25,11 +29,6 @@
         "dashboard profile profile profile"
         "dashboard activity activity activity"
         "dashboard activity activity activity";
-}
-
-.profile-info {
-    grid-area: profile;
-    background-color: green;
 }
 
 .activity-info {
@@ -145,4 +144,154 @@ nav {
     background-color: var(--dashboard-hvr-clr);
 }
 
-/* Activity Section */
+/* Profile Section */
+
+.profile-info {
+    grid-area: profile;
+    background-color: var(--profile-info-bg-clr);
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 0.5fr 1fr;
+
+    grid-template-areas:
+        "searchbar upper-pf-info"
+        "lower-pf-info lower-pf-info";
+}
+
+.search-bar {
+    width: 100%;
+    grid-area: searchbar;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    gap: 0.2rem;
+    padding-top: 10px;
+
+}
+
+#search {
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: none;
+    background-color: var(--search-input-clr);
+}
+
+#search:focus {
+    outline: none;
+}
+
+#search-img {
+    width: 25px;
+    height: 25px;
+}
+
+.upper-profile-info {
+    grid-area: upper-pf-info;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+#bell-ringing {
+    width: 25px;
+    height: 25px;
+}
+
+#otter-pfp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+#upper-name {
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.lower-profile-info {
+    grid-area: lower-pf-info;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-section {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+#pfp-welcome-section {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#welcome-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.button-section {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-right: 50px;
+}
+
+.btn-styling {
+    padding: 15px;
+    background-color: var(--btn-color);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.btn-styling:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
