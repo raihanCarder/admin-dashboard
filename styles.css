@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dashboard-bg-clr: #63C5EA;
+    --dashboard-hvr-clr: #4AAED9;
+    --dashboard-txt-clr: white;
+    --dashboard-border-clr: white;
+}
+
+.grid-layout {
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 0.7fr repeat(2, 1fr) 0.7fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas:
+        "dashboard profile profile profile"
+        "dashboard activity activity activity"
+        "dashboard activity activity activity";
+}
+
+.profile-info {
+    grid-area: profile;
+    background-color: green;
+}
+
+.activity-info {
+    grid-area: activity;
+    margin: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "projects announcements"
+        "projects trending";
+    gap: 20px;
+}
+
+.projects {
+    grid-area: projects;
+    background-color: gray;
+}
+
+.announcements {
+    grid-area: announcements;
+    background: yellow;
+}
+
+.trending {
+    grid-area: trending;
+    background-color: orange;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+    grid-area: dashboard;
+    background-color: var(--dashboard-bg-clr);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 5px;
+}
+
+.title-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.svg-icons {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.section-1,
+.section-2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    gap: 5px;
+}
+
+
+nav {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+
+
+.nav-display {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding-left: 5px;
+
+    color: var(--dashboard-txt-clr);
+
+}
+
+.nav-display:hover {
+    cursor: pointer;
+    padding-left: 5px;
+    border-left: 3px solid var(--dashboard-border-clr);
+
+    background-color: var(--dashboard-hvr-clr);
+}
+
+/* Activity Section */
