@@ -11,7 +11,7 @@ This project helped me fully understand Grids and improved my HTML/CSS knowledge
 - Scrollable project and announcement panels
 - Trending user display
 
-## Screenshots
+## Screenshot
 
 ![Dashboard Screenshot](images/screenshot.png)
 
