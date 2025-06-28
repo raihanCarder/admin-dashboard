@@ -11,6 +11,8 @@ This project helped me fully understand Grids and improved my HTML/CSS knowledge
 - Scrollable project and announcement panels
 - Trending user display
 
+[Live Demo](https://raihanCarder.github.io/admin-dashboard/)
+
 ## Screenshot
 
 ![Dashboard Screenshot](images/screenshot.png)
